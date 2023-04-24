@@ -1,0 +1,8 @@
+# General Windows metadata.
+Thumbs.db
+
+# Visual Studio metadata.
+/.vs/
+
+# Folder for project research.
+/Research/

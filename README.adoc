@@ -1,0 +1,84 @@
+= Bosch-EasyControl-Utilities
+:toc:
+Matthew1471 <https://github.com/matthew1471[@Matthew1471]>;
+
+// Document Settings:
+
+// Set the ID Prefix and ID Separators to be consistent with GitHub so links work irrespective of rendering platform. (https://docs.asciidoctor.org/asciidoc/latest/sections/id-prefix-and-separator/)
+:idprefix:
+:idseparator: -
+
+// Any code examples will be in Python by default.
+:source-language: python
+
+ifndef::env-github[:icons: font]
+
+// Set the admonitions to have icons (Github Emojis) if rendered on GitHub (https://blog.mrhaki.com/2016/06/awesome-asciidoctor-using-admonition.html).
+ifdef::env-github[]
+:status:
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+
+// Document Variables:
+:release-version: 1.0
+:url-org: https://github.com/Matthew1471
+:url-repo: {url-org}/Bosch-EasyControl-Utilities
+:url-contributors: {url-repo}/graphs/contributors
+
+== Introduction
+
+Bosch-EasyControl-Utilities is an unofficial project providing some utilities for the Bosch EasyControl.
+
+== Getting Started
+
+Projects that use graphing use the matplotlib third-party library. This can be installed by typing into your terminal:
+
+[source,bash]
+----
+pip install matplotlib
+----
+
+== Examples
+
+[cols="1,2", options="header"] 
+|===
+|Project
+|Description
+
+|`Plot_WDC_Heat_Curve`
+|Plots the Weather Dependent Control (WDC) heat curves (thanks to Worcester Bosch Technical Support for providing the Weather Compensation Guide).
+
+|=== 
+
+== Copyright and License
+
+=== Code
+
+Copyright (C) 2023  Matthew1471
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+== Authors
+
+*Bosch-EasyControl-Utilities* is led by https://github.com/Matthew1471[Matthew1471] and may have received contributions from {url-contributors}[other individuals] in GitHub's awesome community.
+
+The project was initiated in 2023 by https://github.com/Matthew1471[Matthew1471] after having his own EasyControl installation and wanting to know how to configure the weather compensation heat curve to match the 45&deg;C flow rate he was previously used to.
+
+== Trademarks
+
+Any trademarks used in this project are used in a purely descriptive manner and to state compatability.
