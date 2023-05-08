@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Plot_WDC_Heat_Curve", "Plot_WDC_Heat_Curve\Plot_WDC_Heat_Curve.pyproj", "{857FA8DD-A5D6-4E22-B393-A1B0D00BAD49}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Display_Settings", "Display_Settings\Display_Settings.pyproj", "{78C8F8A9-9B0D-47B5-B3C9-DDBAD9F750C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,8 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{857FA8DD-A5D6-4E22-B393-A1B0D00BAD49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{857FA8DD-A5D6-4E22-B393-A1B0D00BAD49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78C8F8A9-9B0D-47B5-B3C9-DDBAD9F750C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78C8F8A9-9B0D-47B5-B3C9-DDBAD9F750C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

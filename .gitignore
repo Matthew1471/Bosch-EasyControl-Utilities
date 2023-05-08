@@ -6,3 +6,7 @@ Thumbs.db
 
 # Folder for project research.
 /Research/
+
+# Sample data.
+/Display_Settings/Settings_Data.json
+/Display_Settings/Settings_Data_Converted.json
