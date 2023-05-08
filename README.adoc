@@ -49,6 +49,9 @@ pip install matplotlib
 |Project
 |Description
 
+|`Display_Settings`
+|Converts the JSON list of settings exported from the mobile application (Info->About->"Export settings"), to a more readable JSON dictionary of settings (with encoded data decoded).
+
 |`Plot_WDC_Heat_Curve`
 |Plots the Weather Dependent Control (WDC) heat curves (thanks to Worcester Bosch Technical Support for providing the Weather Compensation Guide).
 
