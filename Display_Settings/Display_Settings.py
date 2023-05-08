@@ -22,6 +22,12 @@ import base64
 # We process JSON files.
 import json
 
+# We read command line arguments.
+import sys
+
+# We process ZIP files.
+import zipfile
+
 # Thanks to https://homematic-forum.de/forum/viewtopic.php?t=65434
 def integer_to_homematic_ip_key(number):
     '''Converts integer number to Homematic IP key'''
@@ -45,6 +51,10 @@ def decode_known_encoded_paths(setting_path, setting_value):
         # Energy currency.
         elif setting_path[0] == 'energy' and setting_path[1] == 'currency':
             setting_value['value'] = base64.b64decode(setting_value['value']).decode('utf-8')
+        # Events.
+        elif setting_path[0] == 'events':
+            if len(setting_value['value']) == 1:
+                setting_value['value'][0]['name'] = base64.b64decode(setting_value['value'][0]['name']).decode('utf-8')
 
     elif len(setting_path) == 3:
         # Zone, program or device names.
@@ -117,10 +127,17 @@ def convert_easycontrol_json_list(settings_json_list, decode = True, fix_boolean
     return settings_json_dictionary
 
 def main():
-    # Load the settings_file.
-    with open('Settings_Data.json', mode='r', encoding='utf-8') as settings_file:
-        # Parse the settings_file as a JSON list of settings.
-        settings_json_list = json.load(settings_file)
+    # Check the program arguments.
+    if len(sys.argv) != 2:
+        print('You must specify a ZIP file to convert.')
+        sys.exit(1)
+
+    # Open the ZIP file and read the settings JSON.
+    with zipfile.ZipFile(sys.argv[1]) as settings_archive:
+        # Load the settings_file.
+        with settings_archive.open('Settings_Data.json', mode='r') as settings_file:
+            # Parse the settings_file as a JSON list of settings.
+            settings_json_list = json.load(settings_file)
 
     # Convert the settings JSON list to a proper JSON dictionary (and decode encoded values where appropriate and fix JSON boolean types).
     converted_json_settings = convert_easycontrol_json_list(settings_json_list)
