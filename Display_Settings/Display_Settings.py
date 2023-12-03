@@ -43,7 +43,7 @@ def integer_to_homematic_ip_key(number):
 def decode_known_encoded_paths(setting_path, setting_value):
 
     if len(setting_path) == 2:
-        # Connected Devices.
+        # Connected devices.
         if setting_path[0] == 'devices':
             if len(setting_value['value']) == 1:
                 setting_value['value'][0]['dlk'] = integer_to_homematic_ip_key(int(setting_value['value'][0]['dlk'], 16))

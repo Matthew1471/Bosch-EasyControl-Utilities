@@ -126,7 +126,7 @@ radio_influence_width = 0.08
 radio_influence_height = 0.15
 
 axes_radio_room_influence_factor = figure.add_axes(rect=[radio_influence_left, radio_influence_bottom, radio_influence_width, radio_influence_height], facecolor='lightgoldenrodyellow')
-radio_room_influence_factor = RadioButtons(ax=axes_radio_room_influence_factor, labels=room_influence_factor_dictionary.keys(), active=default_room_influence_factor, activecolor='g')
+radio_room_influence_factor = RadioButtons(ax=axes_radio_room_influence_factor, labels=list(room_influence_factor_dictionary.keys()), active=default_room_influence_factor, activecolor='g')
 figure.text(radio_influence_left - 0.005, radio_influence_bottom + radio_influence_height + 0.01, 'Room Influence Factor')
 
 # Create the horizontal sliders (Rect = Left, Bottom, Width, Height).
@@ -181,9 +181,9 @@ def update_heat_curves(val):
     lines_basic_heat_curve.set_ydata(basic_heat_curve)
 
     # Move the minimum, maximum and summer setback lines.
-    line_minimum_flow_temperature.set_ydata(slider_minimum_flow_temperature.val)
-    line_maximum_flow_temperature.set_ydata(slider_maximum_flow_temperature.val)
-    line_summer_setback_threshold.set_xdata(slider_summer_setback_threshold.val)
+    line_minimum_flow_temperature.set_ydata([slider_minimum_flow_temperature.val])
+    line_maximum_flow_temperature.set_ydata([slider_maximum_flow_temperature.val])
+    line_summer_setback_threshold.set_xdata([slider_summer_setback_threshold.val])
 
     # Move the minimum, maximum and summer setback line annotations.
     annotation_minimum_flow_temperature.set_y(slider_minimum_flow_temperature.val + 1)
